@@ -1,0 +1,98 @@
+body{
+    background-color:grey
+    ;
+}
+
+/* Add styles for the task container */
+#taskContainer {
+    display: flex;
+    flex-direction: row; /* Display in a horizontal row */
+    flex-wrap: wrap; /* Allow tasks to wrap to the next line when the container is too narrow */
+    justify-content: flex-start; /* Align items to the start (left) of the container */
+}
+
+/* Style for the individual task items */
+/* Style for the taskItem and the delete button */
+.taskItem {
+    position: relative;
+    background-color: #ffd700; /* Yellow background for the post-it appearance */
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ffd700; /* Matching border color */
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add a drop shadow */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+.taskItem .deleteButton {
+    position: absolute;
+    top: 5px; /* Adjust the top position as needed */
+    right: 5px; /* Adjust the right position as needed */
+    cursor: pointer;
+    color: red; /* Color of the "x" */
+    font-weight: bold;
+    font-size: 16px;
+    display: none;
+}
+
+.taskItem:hover .deleteButton {
+    display: block;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style for the taskDiv to make it smaller and cuter */
+.taskDiv {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ccc; /* A subtle border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 10px; /* Reduced padding */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.taskDiv label,
+.taskDiv input {
+    margin: 5px;
+}
+
+.taskDiv input[type="text"],
+.taskDiv input[type="time"],
+.taskDiv input[type="date"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 8px; /* Slightly rounded input fields */
+}
+
+.buttonDiv {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addTaskButton {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 6px 10px; /* Reduced padding for the button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.addTaskButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
